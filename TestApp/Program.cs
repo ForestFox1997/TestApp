@@ -1,4 +1,8 @@
 
+using TestApp.Interfaces;
+using TestApp.Gateways;
+using TestApp.Services;
+
 namespace TestApp
 {
     public class Program
@@ -16,6 +20,10 @@ namespace TestApp
             {
                 options.IncludeXmlComments("doc.xml");
             });
+
+            builder.Services.AddSingleton<IClientsService, ClientsService>();
+            builder.Services.AddSingleton<IClientsGateway, ClientsGateway>();
+            builder.Services.AddSingleton<IVariousRequests, ClientsGateway>();
 
             var app = builder.Build();
 

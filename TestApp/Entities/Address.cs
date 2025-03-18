@@ -1,4 +1,6 @@
-﻿namespace TestApp.Entities
+﻿using System.ComponentModel;
+
+namespace TestApp.Entities
 {
     /// <summary>
     /// Адрес клиента
@@ -13,21 +15,25 @@
         /// <summary>
         /// Улица
         /// </summary>
-        public string StreetAddress { get; set; } = "";
+        [DefaultValue("")]
+        public string StreetAddress { get; set; } = string.Empty;
 
         /// <summary>
         /// Город
         /// </summary>
-        public string City { get; set; } = "";
+        [DefaultValue("")]
+        public string City { get; set; } = string.Empty;
 
         /// <summary>
         /// Регион
         /// </summary>
-        public string State { get; set; } = "";
+        [DefaultValue("")]
+        public string State { get; set; } = string.Empty;
 
         /// <summary>
         /// Почтовый код
         /// </summary>
-        public string Zip { get; set; } = "";
+        [DefaultValue(0)]
+        public long Zip { get; set; }
     }
 }
