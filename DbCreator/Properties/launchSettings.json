@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DbCreator": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
